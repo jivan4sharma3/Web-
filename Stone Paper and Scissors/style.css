@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-container {
+    padding: 40px 20px;
+    background: #060616;
+}
+
+.header-container h1 {
+    text-align: center;
+    background: linear-gradient(to right, #1f30af, #241153);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.game-choices {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 3rem;
+    align-items: center;
+    width: 60vw;
+}
+
+.choice {
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #060616;
+}
+
+.choice:hover {
+    cursor: pointer;
+}
+
+.choice img {
+    width: 220px;
+    height: 220px;
+}
+
+.score-border {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    width: 23vw;
+    align-items: center;
+}
+
+.score p {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 5px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+#user-score,
+#com-score , #draw {
+    font-size: 4rem;
+}
+
+.msg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+#msg {
+    text-align: center;
+    background: #060616;
+    color: #ffff;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    .game-choices {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        gap: 0;
+    }
+
+    .score-border {
+        flex-direction: row; /* Force all 3 scores to be in 1 row */
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    #user-score,
+    #com-score,
+    #draw {
+        font-size: 2rem;
+    }
+
+    .score p {
+        font-size: 1.2rem;
+    }
+
+    #msg {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .choice {
+        height: 90px;
+        width: 90px;
+    }
+
+    .header-container h1 {
+        font-size: 1.3rem;
+    }
+
+    #user-score,
+    #com-score,
+    #draw {
+        font-size: 1.8rem;
+    }
+
+    .score p {
+        font-size: 1rem;
+    }
+
+    #msg {
+        font-size: 0.9rem;
+    }
+}

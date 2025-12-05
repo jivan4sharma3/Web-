@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form action="">
+                <div class="display">
+                    <input type="text" id="display" readonly>
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="clearDisplay() ">
+                    <input type="button" value="DEL" onclick="deletespace() ">
+                    <input type="button" value="%" onclick="getValue('%')">
+                    <input type="button" value="/" onclick="getValue('/')">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="getValue('7')">
+                    <input type="button" value="8" onclick="getValue('8')">
+                    <input type="button" value="9" onclick="getValue('9')">
+                    <input type="button" value="*" onclick="getValue('*')">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="getValue('4')">
+                    <input type="button" value="5" onclick="getValue('5')">
+                    <input type="button" value="6" onclick="getValue('6')">
+                    <input type="button" value="-" onclick="getValue('-')">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="getValue('1')">
+                    <input type="button" value="2" onclick="getValue('2')">
+                    <input type="button" value="3" onclick="getValue('3')">
+                    <input type="button" value="+" onclick="getValue('+')">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="getValue('00')">
+                    <input type="button" value="0" onclick="getValue('0')">
+                    <input type="button" value="." onclick="getValue('.')">
+                    <input type="button" value="=" onclick="calculate()" class="equal">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+
+        let display = document.getElementById("display")
+
+        function getValue(num) {
+            display.value += num;
+        }
+
+        function clearDisplay() {
+            display.value = ''
+        }
+
+        function deletespace() {
+            display.value = display.value.slice(0, -1)
+        }
+
+        function calculate() {
+           try{
+            display.value = eval(display.value)
+           }
+           catch{
+            display.value = "Error"
+           }
+        }
+        </script>
+</body>
+
+</html>
