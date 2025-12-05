@@ -1,0 +1,124 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Michroma&family=Noto+Sans&family=Poppins:wght@400;500&family=Ubuntu&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #1F2235;
+  }
+ header {
+    position: sticky;
+    top: 0;
+  }
+
+  nav {
+    height: 10vh;
+    background-color: #1F2235;
+    border-bottom: 2px solid  #23263a;
+  }
+
+  .nav-container {
+    max-width: 75vw;
+    height: 10vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F2235;
+    border-bottom: 2px solid #23263a;
+  }
+
+  .nav-left-container h1 {
+    color: #FF4A57;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+
+  .nav-right-container ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .nav-right-container ul li {
+    list-style: none;
+    padding: 15px;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+
+  .nav-right-container ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  #sidebar-active {
+    display: none;
+  }
+
+  .open-sidebar-button {
+    display: none;
+    cursor: pointer;
+  }
+
+  .close-sidebar-button {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1130px) {
+    .nav-container {
+      max-width: 80vw;
+    }
+  }
+
+  @media (max-width: 929px) {
+    .nav-right-container ul {
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 60vh;
+      background-color: #1F2235;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      z-index: 100;
+      padding-top: 60px;
+    }
+
+    .nav-right-container ul li {
+      width: 100%;
+    }
+
+    .nav-right-container ul li a {
+      display: block;
+      width: 100%;
+      padding: 10px 15px;
+    }
+
+    .open-sidebar-button {
+      display: block;
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      z-index: 101;
+    }
+
+    #sidebar-active:checked~.nav-right-container ul {
+      transform: translateX(0%);
+    }
+
+    #sidebar-active:checked~.nav-right-container ul .close-sidebar-button {
+      display: block;
+    }
+  }

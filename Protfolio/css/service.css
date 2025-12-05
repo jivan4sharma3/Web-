@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Michroma&family=Noto+Sans&family=Poppins:wght@400;500&family=Ubuntu&display=swap');
+
+.service-header-container {
+    margin: auto;
+    padding: 0px 0px 60px;
+}
+
+.service-header-container h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: "Poppins", sans-serif;
+    margin: 5px 0px 10px;
+    color: white;
+}
+
+.service-header-container h1 span {
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+.service-container {
+  max-width: 80vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+  
+}
+
+.service-card-container {
+  height: 35vh;
+  padding: 40px 30px;
+  border: 1px solid #e3e3e3;
+  background: transparent;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+ 
+}
+
+/* Hover Effect */
+.service-card-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-container i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #ff4a57;
+  text-align: center;
+  transition: all 0.4s ease;
+  font-size: 25px;
+  color: #ff4a57;
+}
+
+.service-card-container h4 {
+  font-size: 22px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 500;
+  transition: all 0.4s ease;
+       font-family: "Poppins", sans-serif;
+}
+
+.service-card-container p {
+  transition: all 0.4s ease;
+  margin-top: 15px;
+  color: rgb(255, 255, 255);
+       font-family: "Poppins", sans-serif;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .service-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .service-container {
+    grid-template-columns: 1fr;
+  }
+}

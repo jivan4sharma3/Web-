@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.brands-container {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+}
+
+.brands-text p {
+    font-size: 20px;
+    font-family: "Noto Sans", sans-serif;
+}
+.brands-text span{
+     display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      border-radius: 50%;
+      margin-right: 10px;
+}
+
+.brands-logos {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80vw;
+}
+
+.brands-logos img {
+    width: 13vw;
+}
+
+@media (max-width: 768px) {
+    .brands-container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .brands-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brands-logos img {
+        width: 25vw;
+        margin: auto;
+
+    }
+}
+/* Next section of brand section */
+
+    .brand-img-text-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .brand-left-img,
+    .brand-right-container {
+      width: 48vw;
+      height: 78vh;
+    }
+
+    .brand-left-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-right-container {
+      background-color: black;
+      display: flex;
+    }
+
+    .brand-right-text {
+      margin: auto;
+      width: 40vw;
+      color: white;
+    }
+
+    .brand-right-text p {
+      padding-left: 45px;
+      padding-bottom: 25px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .brand-right-text img {
+      width: 3vw;
+      padding-left: 45px;
+      margin-bottom: 25px;
+    }
+
+    .brand-right-text span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .brand-right-text .brand-text {
+      font-size: 32px;
+      font-weight: 500;
+      padding-left: 45px;
+      line-height: 1.6;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+      .brand-left-img,
+      .brand-right-container {
+        width: 100%;
+        height: auto;
+      }
+
+      .brand-right-text {
+        width: 90%;
+        padding: 30px 0;
+      }
+
+      .brand-right-text img {
+        width: 5vw;
+      }
+
+      .brand-right-text .brand-text {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .brand-right-text p {
+        font-size: 16px;
+        padding-left: 25px;
+      }
+
+      .brand-right-text img {
+        width: 8vw;
+        padding-left: 25px;
+      }
+
+      .brand-right-text .brand-text {
+        font-size: 20px;
+        padding-left: 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand-right-text p {
+        font-size: 14px;
+        padding-left: 20px;
+      }
+
+      .brand-right-text img {
+        width: 10vw;
+        padding-left: 20px;
+      }
+
+      .brand-right-text .brand-text {
+        font-size: 18px;
+        padding-left: 20px;
+      }
+    }

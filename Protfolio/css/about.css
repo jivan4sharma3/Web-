@@ -1,0 +1,125 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Michroma&family=Noto+Sans&family=Poppins:wght@400;500&family=Ubuntu&display=swap');
+
+    .about-section {
+      margin-top: 10px;
+      border-top: 2px solid #23263a;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+    }
+
+    .about-container {
+      max-width: 90vw;
+      height: 100vh;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 30px;
+
+    }
+
+  .about-left-container {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-left-container img {
+      max-height: 70vh;
+      max-width: 100%;
+      height: auto;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .about-right-container {
+      flex: 1 1 350px;
+      width: 100%;
+    }
+
+    .about-right-container h3 {
+      font-size: 30px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+      letter-spacing: 2px;
+      margin: 0px 0px 20px;
+    }
+
+    .about-right-container p {
+      font-size: 15px;
+      font-family: "Poppins", sans-serif;
+      color: rgb(255, 255, 255);
+      margin: 0px 0px 20px;
+    }
+
+    .about-details {
+      display: flex;
+      justify-content: start;
+      align-items: flex-start;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .about-details .info,
+    .about-details .ans {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .download-cv {
+      height: 49px;
+      width: 140px;
+      background-color: red;
+      font-size: 15px;
+      color: white;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      margin: 30px 0px 0px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column-reverse; /* Stack text first, image below */
+      }
+
+      .about-right-container h3 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .about-right-container p {
+        text-align: justify;
+      }
+
+      .about-details {
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .download-cv {
+        display: block;
+        margin: 30px auto 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-right-container h3 {
+        font-size: 20px;
+      }
+
+      .about-right-container p {
+        font-size: 14px;
+      }
+
+      .download-cv {
+        width: 100%;
+        max-width: 200px;
+      }
+    }

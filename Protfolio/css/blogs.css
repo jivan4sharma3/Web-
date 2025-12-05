@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Michroma&family=Noto+Sans&family=Poppins:wght@400;500&family=Ubuntu&display=swap');
+
+.blog-header-container {
+    margin: auto;
+    padding: 0px 0px 60px;
+}
+
+.blog-header-container h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: "Poppins", sans-serif;
+    margin: 5px 0px 10px;
+    color: white;
+}
+
+.blog-header-container h1 span {
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+.blog-container {
+    max-width: 80vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+    height: 80vh;
+}
+
+.blog-card-container {
+    height: 64vh;
+    border: 1px solid #e3e3e3;
+    background: transparent;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    visibility: visible;
+    border: 2px solid #23263a;
+  
+}
+
+.blog-card-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card-img img {
+    width: 386px;
+    height: 32vh;
+}
+
+
+
+.blog-card-text h4 {
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 28px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    margin: 16px 10px 20px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+
+.blog-card-text .p1 {
+    margin-left: 10px;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    /* margin: 0px 10px 10px 0px; */
+    color: #ff4a57;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+.blog-card-text .p2 {
+    font-size: 19px;
+    margin: 16px 10px 20px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.blog-card-text a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    text-transform: capitalize;
+    background: transparent;
+    border: none;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out 0s;
+    margin: 16px 10px 20px;
+    padding: 0px;
+}
+.blog-card-text a:hover{
+    color: #ff4a57;
+}
+
